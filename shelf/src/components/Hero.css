@@ -1,0 +1,18 @@
+.hero-container {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.hero-section {
+  background: black;
+  border-radius: 20px;
+  padding: 15px;
+  height: 150px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 50px;
+}
