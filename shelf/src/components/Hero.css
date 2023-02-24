@@ -7,12 +7,13 @@
   background: black;
   border-radius: 20px;
   padding: 15px;
-  height: 150px;
+  height: 10.980966325036603vw;
   color: white;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3.6603221083455346vw;
 }
