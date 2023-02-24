@@ -9,7 +9,7 @@ h3 {
 .books-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .books-container > div {
@@ -27,11 +27,16 @@ h3 {
   background: rgba(0, 0, 0);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 603px) {
   .books-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+  }
+  .books-container > div {
+    height: 370px;
+    width: 300px;
+    margin-bottom: 9px;
   }
 }
