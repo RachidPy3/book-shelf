@@ -1,31 +1,21 @@
 import React from "react";
 import "./Trending.css";
 import { useContext } from "react";
+import { TrendingContext } from "../context/TrendingContext";
 
 export const Trending = () => {
-  let bookData = useContext();
+  const [...bookData] = useContext(TrendingContext);
 
   return (
     <div className="trending-container">
       <h3>Trending</h3>
-
-      <div className="books-container">
-        <div>
-          <p>book</p>
-        </div>
-        <div>
-          <p>book</p>
-        </div>
-        <div>
-          <p>book</p>
-        </div>
-        <div>
-          <p>book</p>
-        </div>
-        <div>
-          <p>book</p>
-        </div>
-      </div>
+      {bookData.map((book) => {
+        return (
+          <div>
+            <h1>{book.title}</h1>
+          </div>
+        );
+      })}
     </div>
   );
 };
