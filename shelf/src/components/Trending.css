@@ -20,6 +20,7 @@ h3 {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   cursor: pointer;
+  transition: width 0.25s;
 }
 
 .books-container > div:hover {
@@ -38,5 +39,6 @@ h3 {
     height: 370px;
     width: 300px;
     margin-bottom: 9px;
+    transition: width 0.2s;
   }
 }
