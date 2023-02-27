@@ -12,12 +12,17 @@ export const Trending = () => {
       <h3>Trending Books:</h3>
       <div className="trending-container">
         {bookData.map((book) => {
-          return (
+          return book.cover_i ? (
             <div>
               <img
                 src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                 alt="book-cover"
               />
+            </div>
+          ) : (
+            <div className="empty-book">
+              <p>{book.title}</p>
+              <p>by: {book.author_name[0]}</p>
             </div>
           );
         })}

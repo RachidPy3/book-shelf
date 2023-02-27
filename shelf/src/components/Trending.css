@@ -20,8 +20,25 @@ img {
   transition: width 0.25s;
 }
 
+.empty-book {
+  padding: 6px;
+  width: 150px;
+  height: 220px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background: rgba(0, 0, 0, 0.384);
+  color: white;
+  cursor: pointer;
+  transition: width 0.25s;
+}
+
 img:hover {
   width: 165px;
+}
+
+.empty-book:hover {
+  width: 165px;
+  background: rgba(0, 0, 0);
 }
 
 @media screen and (max-width: 603px) {
