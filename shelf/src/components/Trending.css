@@ -54,4 +54,10 @@ img:hover {
     margin-bottom: 9px;
     transition: width 0.2s;
   }
+  .empty-book {
+    height: 370px;
+    width: 300px;
+    margin-bottom: 9px;
+    transition: width 0.2s;
+  }
 }
