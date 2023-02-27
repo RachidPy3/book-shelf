@@ -5,17 +5,23 @@ import { TrendingContext } from "../context/TrendingContext";
 
 export const Trending = () => {
   const [...bookData] = useContext(TrendingContext);
+  console.log(bookData);
 
   return (
-    <div className="trending-container">
-      <h3>Trending</h3>
-      {bookData.map((book) => {
-        return (
-          <div>
-            <h1>{book.title}</h1>
-          </div>
-        );
-      })}
+    <div>
+      <h3>Trending Books:</h3>
+      <div className="trending-container">
+        {bookData.map((book) => {
+          return (
+            <div>
+              <img
+                src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                alt="book-cover"
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
