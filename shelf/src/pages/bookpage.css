@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding-right: 5px;
+}
+
+.image-area {
+  padding: 10px;
+}
+
+p {
+  font-size: medium;
+}

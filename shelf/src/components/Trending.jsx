@@ -2,10 +2,21 @@ import React from "react";
 import "./Trending.css";
 import { useContext } from "react";
 import { TrendingContext } from "../context/TrendingContext";
+import { createSearchParams, useNavigate } from "react-router-dom";
 
 export const Trending = () => {
   const [...bookData] = useContext(TrendingContext);
-  console.log(bookData);
+  const navigate = useNavigate();
+
+  function bookPage(id, img) {
+    navigate({
+      pathname: `/book${id}`,
+      search: createSearchParams({
+        ImageId: img,
+        bookId: id,
+      }).toString(),
+    });
+  }
 
   return (
     <div>
@@ -13,14 +24,25 @@ export const Trending = () => {
       <div className="trending-container">
         {bookData.map((book) => {
           return book.cover_i ? (
-            <div>
+            <div
+              key={book.key}
+              onClick={() => {
+                bookPage(book.cover_i, book.key);
+              }}
+            >
               <img
                 src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
                 alt="book-cover"
               />
             </div>
           ) : (
-            <div className="empty-book">
+            <div
+              className="empty-book"
+              key={book.key}
+              onClick={() => {
+                bookPage(book.cover_i, book.key);
+              }}
+            >
               <p>{book.title}</p>
               <p>by: {book.author_name[0]}</p>
             </div>
