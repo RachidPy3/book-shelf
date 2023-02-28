@@ -13,7 +13,7 @@ export const BookPage = () => {
     description: "",
   });
 
-  const bookUrl = `https://openlibrary.org/works/${id}.json`;
+  const bookUrl = `https://openlibrary.org/${id}.json`;
 
   React.useEffect(() => {
     axios.get(bookUrl).then((res) => {

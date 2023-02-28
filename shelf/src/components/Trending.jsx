@@ -10,7 +10,7 @@ export const Trending = () => {
 
   function bookPage(id, img) {
     navigate({
-      pathname: `/book${id}`,
+      pathname: `${id}`,
       search: createSearchParams({
         ImageId: img,
         bookId: id,
@@ -27,7 +27,7 @@ export const Trending = () => {
             <div
               key={book.key}
               onClick={() => {
-                bookPage(book.cover_i, book.key);
+                bookPage(book.key, book.cover_i);
               }}
             >
               <img
@@ -40,7 +40,7 @@ export const Trending = () => {
               className="empty-book"
               key={book.key}
               onClick={() => {
-                bookPage(book.cover_i, book.key);
+                bookPage(book.key, book.cover_i);
               }}
             >
               <p>{book.title}</p>

@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/:id" element={<BookPage />} />
+          <Route path="/book/works/:id" element={<BookPage />} />
         </Routes>
       </Router>
     </div>
